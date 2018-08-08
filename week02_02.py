@@ -3,14 +3,16 @@ import json
 
 
 def to_json(func):
-    result = func(*args, )
-    return json.dumps(result)
+    @functools.wraps(func)
+    def wrapped(*args, **kwargs):
+        return json.dumps(func(*args, **kwargs))
+    return wrapped
 
 
 @to_json
-def get_data():
+def get_data(parm):
     return {
-        'data': 42
+        'data': parm
     }
 
 print(get_data())
