@@ -4,7 +4,7 @@ import os
 import tempfile
 
 
-storage_path = os.path.join('D:\\Temp', 'storage_data')
+storage_path = os.path.join(tempfile.gettempdir(), 'storage_data')
 
 
 def clear():
