@@ -55,6 +55,3 @@ if __name__ == '__main__':
         print(get(args.key))
     else:
         print('Wrong command')
-
-
-        123213213
