@@ -10,9 +10,10 @@ def to_json(func):
 
 
 @to_json
-def get_data(parm):
+def get_data():
     return {
-        'data': parm
+        'data': 42
     }
 
-print(get_data())
+
+get_data()
