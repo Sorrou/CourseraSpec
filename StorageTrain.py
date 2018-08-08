@@ -1,15 +1,10 @@
 import argparse
 import json
-import os
-import tempfile
 
-storage_path = os.path.join(tempfile.gettempdir(), 'storage_data')
+storage_path = ('D:\\Temp\\storage_data')
 
 
 def get_data():
-    if not os.path.exists(storage_path):
-        return {}
-
     with open(storage_path, 'r') as f:
         raw_data = f.read()
         if raw_data:
@@ -36,8 +31,8 @@ def get(key):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser()
-    parser.add_argument('--key', help ='Key')
-    parser.add_argument('--val', help = 'Value')
+    parser.add_argument('--key', help='Key')
+    parser.add_argument('--val', help='Value')
 
     args = parser.parse_args()
 
