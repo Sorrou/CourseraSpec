@@ -3,7 +3,7 @@ import json
 
 
 storage_path = ('D:\\Temp\\storage_data')
-=======
+
 storage_path = 'D:\\Temp\\storage'
 with open (storage_path, 'a') as s:
     s.read()
