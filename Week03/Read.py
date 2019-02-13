@@ -8,10 +8,3 @@ class FileReader():
             return file.read()
         except IOError:
             return ""
-
-def main():
-    x = FileReader('D:\\123.txt')
-    print(x.read())
-
-if __name__ == "__main__":
-    main()
